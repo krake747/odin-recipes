@@ -1,0 +1,48 @@
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: hsl(50, 10%, 85%);
+}
+
+img {
+  max-width: 50%;
+  border: 5px solid;
+  border-color: hsl(60, 5%, 20%);
+}
+
+ul {
+  list-style: none;
+}
+
+ul li::before {
+  content: "\2022";
+  color: grey;
+  font-weight: bold;
+  display: inline-block;
+  width: 1em;
+  margin-left: -1em;
+}
+
+ol {
+  list-style: none;
+  counter-reset: li;
+}
+
+ol li {
+  counter-increment: li;
+}
+
+ol li::before {
+  content: counter(li);
+  color: darkred;
+  font-weight: bold;
+  display: inline-block;
+  width: 1em;
+  margin-left: -1em;
+}
+
+.main-title {
+  font-size: 48px;
+  font-weight: bold;
+  text-align: center;
+}
+
